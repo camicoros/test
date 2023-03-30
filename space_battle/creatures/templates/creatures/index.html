@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+    {% if spacemans %}
+        {% for spaceman in spacemans %}
+            <p>{{ spaceman }}</p>
+        {% endfor %}
+    {% endif %}
+    {% if spacemans_from_db %}
+        {% for spaceman in spacemans_from_db %}
+            <p>{{ spaceman }} - {{spaceman.experience}}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
